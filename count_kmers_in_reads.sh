@@ -30,10 +30,3 @@ do
     grep -oP "$fv|$rc" $fastq_path | wc -l >> "$fastq.cnt"
   fi
 done
-
-python3 "$script_dir/collect_counts.py" --kmers $kmers_tsv
-
-mkdir raw_counts
-mv *.cnt raw_counts
-#rm -r raw_counts
-
