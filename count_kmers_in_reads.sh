@@ -18,8 +18,8 @@ script_dir="$(dirname "$(readlink -f "$0")")"
 
 echo $fastq
 
-for fv in `cut -f1 $kmers_tsv`
-do 
+for fv in `cut -f 2 $kmers_tsv`
+do
   rc=`echo $fv | tr ACGTacgt TGCAtgca | rev`
   echo -n "$fv $rc "; date +"%D %T"
 
